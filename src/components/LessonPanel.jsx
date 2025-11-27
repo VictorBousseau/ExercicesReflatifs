@@ -63,6 +63,19 @@ const LessonPanel = () => {
             </div>
 
             <div className="lesson-card">
+                <h3>Calculs en chaîne</h3>
+                <p><strong>Attention aux priorités !</strong></p>
+                <p>1. D'abord les <strong>multiplications</strong>.</p>
+                <p>2. Ensuite les additions et soustractions de la <strong>gauche vers la droite</strong>.</p>
+                <div className="example">
+                    Ex: 3 + 4 × 2 - 5<br />
+                    = 3 + 8 - 5 (Multiplication d'abord)<br />
+                    = 11 - 5 (Gauche à droite)<br />
+                    = 6
+                </div>
+            </div>
+
+            <div className="lesson-card">
                 <h3>Simplification d'écriture</h3>
                 <p>On peut supprimer les parenthèses et le signe + du début.</p>
                 <div className="example">

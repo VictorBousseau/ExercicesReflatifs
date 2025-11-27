@@ -37,6 +37,10 @@ const PracticePanel = ({
                         <option value={6}>6. Priorités</option>
                         <option value={7}>7. Parenthèses</option>
                         <option value={8}>8. Division</option>
+                        <option value={9}>9. Enchaînement (3 termes)</option>
+                        <option value={10}>10. Enchaînement (4 termes)</option>
+                        <option value={11}>11. Enchaînement (5 termes)</option>
+                        <option value={12}>12. ULTIME (Grands nombres)</option>
                     </select>
                 </div>
             </div>
