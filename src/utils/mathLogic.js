@@ -106,12 +106,27 @@ export const generateQuestion = (level) => {
         terms.push(t);
       }
 
-      // Generate operations with balanced probability
+      // Generate operations with balanced probability but ensure at least one multiplication
+      let hasMultiplication = false;
       for (let i = 0; i < numTerms - 1; i++) {
-        const r = Math.random();
-        if (r < 0.33) ops.push('+');
-        else if (r < 0.66) ops.push('-');
-        else ops.push('*');
+        // If it's the last operation and we haven't added a multiplication yet, force it.
+        if (i === numTerms - 2 && !hasMultiplication) {
+          ops.push('*');
+        } else {
+          const r = Math.random();
+          if (r < 0.33) ops.push('+');
+          else if (r < 0.66) ops.push('-');
+          else {
+            ops.push('*');
+            hasMultiplication = true;
+          }
+        }
+      }
+
+      // Shuffle operations to randomize the position of the multiplication
+      for (let i = ops.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [ops[i], ops[j]] = [ops[j], ops[i]];
       }
 
       // Construct the expression string for display

@@ -20,7 +20,7 @@ const LessonPanel = () => {
                     <h4>Signes contraires</h4>
                     <p>Le résultat a le signe du nombre qui a la plus grande distance à zéro. On fait la différence des distances à zéro.</p>
                     <div className="example">
-            Ex: (-5) + (+3) = -2 (car 5 > 3, donc signe -)<br />
+                        Ex: (-5) + (+3) = -2 (car 5 &gt; 3, donc signe -)<br />
                         Ex: (+5) + (-3) = +2
                     </div>
                 </div>
